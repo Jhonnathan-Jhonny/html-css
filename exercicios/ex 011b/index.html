@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo videos hospedados Localmente.</h1>
+    <p>Este vídeo esta hospedado no meu proprio servidor.</p>
+    <h2>Forma basica de colocar:</h2>
+    <video src="midia/video-avião.ogv" width="300" controls preload="none"></video>
+    <h2>Forma melhor de colocar:</h2>
+    <video controls width="300" preload="metadata" poster="imagens/Flash.jpg" autoplay loop>
+        <source src="midia/video-avião.m4v" type="video/m4v">
+        <source src="midia/video-avião.webm" type="video/webm">
+        <source src="midia/video-avião.mp4" type="video/mp4">
+        <source src="midia/video-avião.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeo.</p>
+        <a href="midia/video-avião.mp4" download="video-avião.mp4">Baixar em MP4</a>
+    </video>
+      
+    <h1>Inserindo video do Youtube:</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LW0bhKitRBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

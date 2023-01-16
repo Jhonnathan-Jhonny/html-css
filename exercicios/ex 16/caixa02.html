@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightblue;
+        margin: 0px;
+    }
+    header {
+        background-color: antiquewhite;
+        margin: 10px;
+        padding: 10px;
+    }
+    header > h1 {
+        text-align: center;
+        background-color: aqua;
+    }
+    nav {
+        background-color: aqua;
+        padding: 3px;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.445);
+    }
+    nav > a {
+        text-decoration: none;
+        margin-right: 50px;
+        font-weight: bolder;
+    }
+    nav > a:hover {
+        text-decoration: underline;
+        color: blue;
+    }
+    a:visited {
+        color: green;
+    }
+    a:active {
+        color: crimson;
+    }
+    footer {
+        color: white;
+        background-color: black;
+        text-align: center;
+        margin: 0px;
+        padding: 10px;
+    }
+    footer > p {
+        margin: 0px;
+    }
+    main {
+        background-color: cornsilk;
+        border: 10px solid black;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 15px 0px;
+    }
+    section {
+        background-color: rgb(197, 185, 169);
+        text-align: center;
+    }
+    section > p {
+        background-color: aqua;
+    }
+    article > p {
+        text-align: left;
+    }
+    aside {
+        background-color: aqua;
+    }
+    div#bola {
+        height: 100px;
+        width: 100px;
+        margin: 10px auto;
+        border-radius: 50%;
+        background-color: rgb(0, 92, 92);
+
+    }
+</style>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Links</a>
+            <a href="#">Links</a>
+            <a href="#">Links</a>
+            <a href="#">Links</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Futebol | Saúde | Idade</p>
+        </section>
+        <section>
+            <article>
+                <h2>Assuntos do Brasil</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem eius sed illum reiciendis quas magni eveniet fugit hic ea et, laboriosam nulla? Aut quae rem tempore cumque doloremque atque distinctio.</p>
+            </article>
+            <aside>
+                <p>Escrito por Jhonnathan</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>Site desenvolvido por Jhonnathan</p>
+    </footer>
+    <div id="bola">
+
+    </div>
+</body>
+</html>

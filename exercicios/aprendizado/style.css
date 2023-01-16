@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'love';
+    src: url(fonts/lovestory.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'happy';
+    src: url(fonts/jack.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(90deg,#204473,#D0ECF2);
+}
+/* SELETORES PERSONALIZADOS
+        # = id
+        . = class
+        : = pseudo-class
+        :: = pseudo-elemento
+        > = clildren (filho)
+*/
+
+/* id */
+h1#pseudo {
+    font-size: 30px;
+    font-weight: 500;
+}
+/* classe */
+h1.primeiros-h1 {
+    color: #204473;
+}
+/* pseudo classe */
+div {
+    background-color: #204473;
+    display: inline-block;
+
+    height: 50px;
+    width: 200px; 
+
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 15px #31383ac4;
+
+    text-align: center;
+}
+div:hover {
+    background-color: #576366a6;
+}
+div > p {
+    display: none;
+}
+div:hover > p {
+    display: block;
+}
+a {
+    color: red;
+    text-decoration: none;
+}
+a:visited {
+    color: darkred;
+}
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+}
+.especial{
+    background-color: #D0ECF2;
+}
+.especial::before {
+    content: ' ☑';
+}
+.especial::after {
+    content: ' ☟';
+} 
+main {
+    background-color: #7E8C69;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #122641a6;
+    width: 1000px;
+    padding: 10px;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'love', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    color: #D0ECF2;
+    text-align: center;
+    text-shadow: 1px 1px 2px #576366a6;
+}
+h2 {
+    font-family: 'happy', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    color: #D0ECF2;
+}
+h3 {
+    color: #D0ECF2;
+}
+h4 {
+    color: #D0ECF2;
+}
+p {
+    text-indent: 40px;
+    color: #D0ECF2;
+}
+ol {
+    color: #D0ECF2;
+}
+ul {
+    color: #D0ECF2;
+}
+address {
+    color: #D0ECF2;
+}
+pre {
+    color: #D0ECF2;
+}
+dl{
+    color: #D0ECF2;
+}
+blockquote {
+    color: #D0ECF2;
+}
+mark {
+    background-color: #204473;
+    color: #D0ECF2;
+}
