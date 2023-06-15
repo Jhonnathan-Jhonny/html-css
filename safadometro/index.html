@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../safadometro/estilos/principal.css">
+    <title>Safadômetro</title>
+</head>
+<body>
+    <main id="tela">
+        <p>Safadômetro</p>
+        <div><img src="imagens/anjoDemonio.webp" alt="Anjo e demobio"></div>
+        <form action="index.html" method="post" autocomplete="off">
+            <div>
+                <label for="idata"></label>
+                <input type="date" name="data" id="idata" required max="2024/01/01">
+            </div>
+            <div>
+                <button onclick="calcular">Calcular</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+<script>
+    function calcular(){
+        var inputData = document.getElementById("idata").value;
+        var dataSelecionada = new Date(inputData);
+        var anoSelecionado = dataSelecionada.getFullYear();
+        var doisUltimosDigitos = anoSelecionado.toString().substring(2);
+    }
+</script>
+</html>
