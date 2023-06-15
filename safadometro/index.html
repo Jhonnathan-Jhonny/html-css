@@ -17,18 +17,49 @@
                 <input type="date" name="data" id="idata" required max="2024/01/01">
             </div>
             <div>
-                <button onclick="calcular">Calcular</button>
+                <button onclick="calcular(event)">Calcular</button>
             </div>
         </form>
+        <p id="resultado"></p>
     </main>
 </body>
 
 <script>
-    function calcular(){
+    function calcular(event) {
+        event.preventDefault(); // Impede o envio do formulário
+
         var inputData = document.getElementById("idata").value;
         var dataSelecionada = new Date(inputData);
         var anoSelecionado = dataSelecionada.getFullYear();
-        var doisUltimosDigitos = anoSelecionado.toString().substring(2);
+        var ano = anoSelecionado.toString().substring(2);
+        var dia = dataSelecionada.getDate();
+        var mes = dataSelecionada.getMonth() + 1;
+
+        var safadeza = safadezaCalc(dia, mes, ano);
+        var anjo = anjoCalc(dia, mes, ano, safadeza);
+
+        var resultadoElemento = document.getElementById("resultado");
+        resultadoElemento.textContent = "Safadeza: " + safadeza.toFixed(2) + "% | Anjo: " + anjo.toFixed(2) + "%";
+    }
+
+    function somatorioDoMes(mes) {
+        var soma = 0;
+        for (var i = 1; i <= mes; i++) {
+            soma += i;
+        }
+        return soma;
+    }
+
+    function anjoCalc(dia, mes, ano, safadeza) {
+        var anjo = 100 - safadeza;
+        // console.log("Anjo: " + anjo.toFixed(2) + "%");
+        return anjo;
+    }
+
+    function safadezaCalc(dia, mes, ano) {
+        var safadeza = somatorioDoMes(mes) + (ano / 100) * (50 - dia);
+        // console.log("Safadeza: " + safadeza.toFixed(2) + "%");
+        return safadeza;
     }
 </script>
 </html>
