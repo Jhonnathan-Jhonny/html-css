@@ -1,53 +1,46 @@
-@charset "UTF-8";
-
-@media screen and (min-width: 780px) {
-
+    
+@media screen and (max-width: 800px) {
     * {
-        font-family: Arial, Helvetica, sans-serif;
         padding: 0px;
+        margin: 0px;
     }
 
     body {
-        background: black url(../imagens/diabo.jpg) center left no-repeat;
-        background-size: 700px;
-        background-attachment: fixed;
-        overflow: hidden
+        background-color: black;
     }
 
-    main{
+    main {
         position: relative;
     }
 
-    main#tela{
+    main#tela {
+
         position: absolute;
 
         top: 50%;
-        left: 80%;
+        left: 50%;
 
         transform: translate(-50%,-50%);
 
+        width: 300px;
+        height: 550px;
         background-color: white;
-        width: 450px;
-        height: 640px;
-        margin-right: 90vh;
         border-radius: 10px;
     }
 
     main > p {
         text-align: center;
         font-size: 30px;
-        font-weight: bold;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        margin-top: 15px;
-
+        padding-top: 20px;
     }
 
-    main > div{
-        text-align: center;
+    div {
+        align-items: center;
     }
 
-    main > div > img {
-        max-width: 200px;
+    main  img {
+        padding: 10px;
+        width: 250px;
     }
 
     main form {
@@ -58,13 +51,13 @@
         width: 200px;
         height: 50px;
         font-size: 20px;
-        margin-top: 50px;
+        margin-top: 10px;
         border: none;
     }
 
     main button {
         font-size: 30px;
-        margin: 30px;
+        margin: 10px 30px 20px 30px;
         width: 200px;
         height: 50px;
         border-radius: 10px;
@@ -80,19 +73,18 @@
 
     p#resultadoSafadeza {
         display: inline-block;
-        width: 150px;
+        width: 120px;
         padding: 10px;
         border-radius: 10px;
         border: 2px outset #fa2e2e;
-        margin: 10px 0px 20px 40px;
+        margin: 0px 0px 0px 5px;
         background: linear-gradient(0deg, #fa2e2e, white);}
 
     p#resultadoAnjo{
         display: inline-block;
-        margin: 10px 0px 20px 40px;
         padding: 10px;
         border-radius: 10px;
-        width: 150px;
+        width: 120px;
         border: 2px outset #3f3ffa;
         background: linear-gradient(0deg, #3f3ffa, white);
     }

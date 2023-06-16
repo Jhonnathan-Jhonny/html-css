@@ -1,14 +1,12 @@
-    
-@media screen and (max-width: 767px) {
-    * {
-        padding: 0px;
-        margin: 0px;
-    }
+/* @charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     body {
-        background-color: black;
+        background: black url(../imagens/anjoDemonio.webp) center center repeat;
+        background-size: 100px;
+        height: 100vh;
     }
-
     main {
         position: relative;
     }
@@ -22,48 +20,29 @@
 
         transform: translate(-50%,-50%);
 
-        width: 300px;
-        height: 550px;
+        width: 700px;
+        height: 300px;
         background-color: white;
         border-radius: 10px;
+    }
+
+    main  img {
+        display: block;
+        padding: 10px;
+        width: 250px;
     }
 
     main > p {
         text-align: center;
         font-size: 30px;
-        padding-top: 20px;
-    }
-
-    div {
-        align-items: center;
-    }
-
-    main  img {
-        padding: 10px;
-        width: 250px;
-    }
-
-    main form {
-        text-align: center;
+        margin-top: 10px;
     }
 
     main input {
-        width: 200px;
-        height: 50px;
-        font-size: 20px;
-        margin-top: 10px;
-        border: none;
+        margin-left: 400px;
     }
-
     main button {
-        font-size: 30px;
-        margin: 10px 30px 20px 30px;
-        width: 200px;
-        height: 50px;
-        border-radius: 10px;
-        border: 2px solid black;
-        color: white;
-        background-color: #3f3ffa;
+
     }
 
     main button:hover{
@@ -88,4 +67,4 @@
         border: 2px outset #3f3ffa;
         background: linear-gradient(0deg, #3f3ffa, white);
     }
-}
+} */
