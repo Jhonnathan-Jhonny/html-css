@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../safadometro/estilos/principal.css">
+    <link rel="stylesheet" href="../safadometro/estilos/telas-grandes.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../safadometro/imagens/favicon.ico" type="image/x-icon">
     <title>Safadômetro</title>
 </head>
 <body>
@@ -20,7 +22,9 @@
                 <button onclick="calcular(event)">Calcular</button>
             </div>
         </form>
-        <p id="resultado"></p>
+        <p id="resultadoSafadeza"></p>
+        <p id="resultadoAnjo"></p>
+        <p id="mensagem"></p>
     </main>
 </body>
 
@@ -38,8 +42,19 @@
         var safadeza = safadezaCalc(dia, mes, ano);
         var anjo = anjoCalc(dia, mes, ano, safadeza);
 
-        var resultadoElemento = document.getElementById("resultado");
-        resultadoElemento.textContent = "Safadeza: " + safadeza.toFixed(2) + "% | Anjo: " + anjo.toFixed(2) + "%";
+        var Safadeza = document.getElementById("resultadoSafadeza");
+        var Anjo = document.getElementById("resultadoAnjo");
+        Safadeza.textContent = "Safadeza: \n "+ safadeza.toFixed(2) + "%" ;
+        Anjo.textContent = "Anjo: " + anjo.toFixed(2) + "%";
+
+
+        var mensagem = document.getElementById("mensagem");
+        if(safadeza > anjo){
+            mensagem.textContent = "Você está muito safadinho." ;
+        }
+        else {
+            mensagem.textContent = "Só quer ser santo." ;
+        }
     }
 
     function somatorioDoMes(mes) {
@@ -52,13 +67,11 @@
 
     function anjoCalc(dia, mes, ano, safadeza) {
         var anjo = 100 - safadeza;
-        // console.log("Anjo: " + anjo.toFixed(2) + "%");
         return anjo;
     }
 
     function safadezaCalc(dia, mes, ano) {
         var safadeza = somatorioDoMes(mes) + (ano / 100) * (50 - dia);
-        // console.log("Safadeza: " + safadeza.toFixed(2) + "%");
         return safadeza;
     }
 </script>
